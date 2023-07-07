@@ -1,0 +1,17 @@
+﻿@model List<string>
+
+<h1>BookshelfMVC</h1>
+
+<ul>
+    @foreach (var book in Model)
+    {
+        <li>@book</li>
+    }
+</ul>
+
+<h2>Add a Book</h2>
+
+<form method="post" action="/book/addbook">
+    <input type="text" name="bookName" required />
+    <button type="submit">Add</button>
+</form>
